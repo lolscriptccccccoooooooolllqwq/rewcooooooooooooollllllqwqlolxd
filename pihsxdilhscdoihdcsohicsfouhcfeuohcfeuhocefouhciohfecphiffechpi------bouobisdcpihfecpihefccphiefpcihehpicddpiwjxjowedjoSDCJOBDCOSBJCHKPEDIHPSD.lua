@@ -1,3 +1,6 @@
+if _G.SeedsNextWhileListchecked == "1596324780" then
+
+
 _G.autoparrys=false
 game.Players.LocalPlayer:SetAttribute("waitparry", false)
 game.Players.LocalPlayer:GetAttributeChangedSignal("waitparry"):Connect(function()
@@ -421,6 +424,6 @@ end)
 SpeedJumpGravity:AddToggle("auto parry",false,function(Value)
 _G.autoparrys=Value
 end)
-
+end
 
 
