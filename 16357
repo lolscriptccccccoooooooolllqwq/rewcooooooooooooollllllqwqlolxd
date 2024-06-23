@@ -1,0 +1,794 @@
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game:FindFirstChild('CoreGui')
+frame = Instance.new("Frame")
+frame.Name = "VerificationFrame" -- 添加名称方便查找和管理
+frame.Parent = ScreenGui
+frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+frame.BorderColor3 = Color3.fromRGB(50, 50, 50) -- 边框颜色与背景色一致，实现无边框效果
+frame.BorderSizePixel = 0
+frame.Position = UDim2.new(0.5, -200, 0.5, -100)
+frame.Size = UDim2.new(0, 430, 0, 230)
+frame.BackgroundTransparency = 0.1 -- 背景不完全实色，增加透明度以显得柔和
+
+-- 创建圆角
+local frameUICorner = Instance.new("UICorner")
+frameUICorner.CornerRadius = UDim.new(0, 15) -- 增大圆角大小
+frameUICorner.Parent = frame
+-- 创建标题
+
+message = Instance.new("TextLabel")
+message.Name = "Title"
+message.Text = ""
+message.Parent = frame
+rlllllskjddj=[[Seeds Next
+]]
+
+message.TextScaled = true
+message.Font = Enum.Font.GothamBold
+message.TextColor3 = Color3.fromRGB(255, 255, 255)
+message.BackgroundTransparency = 1 -- 标题无背景
+
+message.Size = UDim2.new(1, 0, 0, 50)
+message.Position = UDim2.new(0, 0, 0, 15)
+message.TextXAlignment = Enum.TextXAlignment.Center -- 文本居中对齐
+for i=1,#rlllllskjddj do
+message.Text = message.Text..rlllllskjddj:sub(i,i)
+wait(0.1)
+end
+wait(0.6)
+rlllllskjddj=[[wevyyds16 /// qumu]]
+for i=1,#rlllllskjddj do
+message.Text = message.Text..rlllllskjddj:sub(i,i)
+wait(0.1)
+end
+-- 创建加载框
+local CHECKKEY = Instance.new("TextButton")
+CHECKKEY.Name = "→"
+CHECKKEY.Text = "→"
+CHECKKEY.BackgroundTransparency = 0.1
+CHECKKEY.TextXAlignment = Enum.TextXAlignment.Center
+CHECKKEY.Parent = frame
+CHECKKEY.TextColor3 = Color3.fromRGB(0, 0, 0)
+--CHECKKEY.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+--loadingFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+--CHECKKEY.BorderColor3 = Color3.fromRGB(0, 255, 0) -- 加载框颜色稍深以便区分
+adient = Instance.new("UIGradient")
+      adient.Rotation = 45
+adient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 255, 90)), -- 亮红色起点
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 215, 0))  -- 暗红色终点
+}
+local CHECKerKEY = Instance.new("UICorner")
+        CHECKerKEY.CornerRadius = UDim.new(0.2, 1) 
+
+        CHECKerKEY.Parent = CHECKKEY
+adient.Parent=CHECKKEY
+CHECKKEY.Size = UDim2.new(0, 50, 0, 50)
+CHECKKEY.Position = UDim2.new(0.82, -25, 0.5, -CHECKKEY.AbsoluteSize.Y/2 + 25)
+
+
+
+
+
+
+
+local loaingFrame = Instance.new("TextButton")
+loaingFrame.Name = "→"
+loaingFrame.Text = "GET KEY"
+loaingFrame.BackgroundTransparency = 0.1
+loaingFrame.TextXAlignment = Enum.TextXAlignment.Center
+loaingFrame.Parent = frame
+loaingFrame.TextColor3 = Color3.fromRGB(0, 0, 0)
+--loaingFrame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+--loadingFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+--loaingFrame.BorderColor3 = Color3.fromRGB(255, 0, 0) -- 加载框颜色稍深以便区分
+gradient = Instance.new("UIGradient")
+      gradient.Rotation = 45
+gradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 120, 0)), -- 亮红色起点
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 0, 0))  -- 暗红色终点
+}
+local tUICorner = Instance.new("UICorner")
+        tUICorner.CornerRadius = UDim.new(0.2, 1) 
+
+        tUICorner.Parent = loaingFrame
+gradient.Parent=loaingFrame
+loaingFrame.Size = UDim2.new(0, 50, 0, 50)
+loaingFrame.Position = UDim2.new(0.7, -25, 0.5, -loaingFrame.AbsoluteSize.Y/2 + 25)
+
+local loadingFrame = Instance.new("Frame")
+loadingFrame.Name = "LoadingFrame"
+loadingFrame.Parent = frame
+loadingFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+loadingFrame.BorderColor3 = Color3.fromRGB(50, 50, 50) -- 加载框颜色稍深以便区分
+loadingFrame.Size = UDim2.new(0, 50, 0, 50)
+loadingFrame.Position = UDim2.new(0.5, -25, 0.5, -loadingFrame.AbsoluteSize.Y/2 + 25)
+
+ local rainbowColors = {
+    Color3.fromRGB(255, 0, 0), -- 红
+    Color3.fromRGB(255, 127, 0), -- 橙
+    Color3.fromRGB(255, 255, 0), -- 黄
+    Color3.fromRGB(0, 255, 0), -- 绿
+    Color3.fromRGB(0, 0, 255), -- 蓝
+    Color3.fromRGB(255, 255, 255),
+    Color3.fromRGB(75, 0, 130), -- 紫
+}
+
+loadingFrame.BackgroundTransparency = 1
+
+
+
+aaaaaaaaaa=Instance.new("Frame")
+aaaaaaaaaa.Name="O.O"
+aaaaaaaaaa.BackgroundTransparency = 0.1
+aaaaaaaaaa.Size = UDim2.new(0, 220, 0, 50)
+aaaaaaaaaa.Position = UDim2.new(0.2, -35, 0.5, -aaaaaaaaaa.AbsoluteSize.Y/2 + 25)
+aaaaaaaaaa.Parent=frame
+ditkdjdjsjw=Instance.new("UIGradient")
+      ditkdjdjsjw.Rotation = 45
+ditkdjdjsjw.Color = ColorSequence.new{
+   ColorSequenceKeypoint.new(0,  Color3.fromRGB(75, 0, 130)), 
+   ColorSequenceKeypoint.new(0.5,  Color3.fromRGB(35, 0, 90)), 
+   
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(75, 0, 130))  -- 暗红色终点
+}
+ditkdjdjsjw.Parent=aaaaaaaaaa
+local eUICorner = Instance.new("UICorner")
+eUICorner.CornerRadius = UDim.new(0, 10) -- 增大圆角大小
+eUICorner.Parent = aaaaaaaaaa
+TextBox = Instance.new("TextBox")
+TextBox.Size = UDim2.new(0, 220, 0, 50)
+TextBox.Position = UDim2.new(0.2, -35, 0.5, -TextBox.AbsoluteSize.Y/2 + 25)
+--TextBox.BackgroundColor3 = Color3.fromRGB(0, 255, 25) 
+TextBox.BackgroundTransparency = 1
+TextBox.PlaceholderText = "Enter your key"
+TextBox.Text = ""
+TextBox.Parent=frame
+TextBox.TextSize = 18
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+
+
+
+
+-- 创建加载框圆角
+local loadingFrameUICorner = Instance.new("UICorner")
+loadingFrameUICorner.CornerRadius = UDim.new(0, 15) -- 增大圆角大小
+task.spawn(function()
+      while game:GetService("RunService").RenderStepped:wait() do
+      gradient.Rotation=gradient.Rotation+2
+adient.Rotation=adient.Rotation+3
+ditkdjdjsjw.Rotation=ditkdjdjsjw.Rotation+2
+end
+end)
+loadingFrameUICorner.Parent = loadingFrame
+
+loaingFrame.MouseButton1Click:Connect(function()
+setclipboard("https://seedsnextlol.icu/getkey.html")
+CHECKKEY.Visible=false
+loaingFrame.Visible=false
+TextBox.Visible=false
+aaaaaaaaaa.Visible=false
+game.TweenService:Create(frame,TweenInfo.new(1.5,Enum.EasingStyle.Quint),{Size=UDim2.new(0, 430, 0, 0)}):Play()
+wait(0.5)
+message.Visible=false
+end)
+
+
+
+CHECKKEY.MouseButton1Click:Connect(function()
+if checking then
+else
+checking=true
+if TextBox.Text:lower()=="ditto" then
+message.Text=""
+rlllllskjddj=[[Seeds Next
+wevyyds16 /// qumu
+正在加载...
+]]
+for i=1,#rlllllskjddj do
+message.Text = message.Text..rlllllskjddj:sub(i,i)
+wait(0.01)
+end
+CHECKKEY.Visible=false
+loaingFrame.Visible=false
+TextBox.Visible=false
+aaaaaaaaaa.Visible=false
+
+
+
+
+-- 设置圆圈的属性
+local numDots = 64
+local radius = 60
+dots = {}
+local timeElapsed = 0
+
+for i=1,numDots do
+
+            dots[i] = Instance.new("Frame")
+            dots[i].Size = UDim2.new(0, 8, 0, 8)
+            
+          dots[i].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            dots[i].Parent = loadingFrame
+            local dotUICorner = Instance.new("UICorner")
+        dotUICorner.CornerRadius = UDim.new(1, 100) 
+
+        dotUICorner.Parent = dots[i]
+        
+
+       
+
+end
+xaaakal=rainbowColors[math.random(#rainbowColors)]
+task.spawn(function()
+      while game:GetService("RunService").RenderStepped:wait() do
+      xaaakal=rainbowColors[math.random(#rainbowColors)]
+     wait(math.random(1,3))
+--     numDots=math.random(130,220)
+       end
+      end)
+-- 创建加载框的旋转动画
+game:GetService("RunService").RenderStepped:Connect(function()
+
+    local rotation = tick() * 180 % 360
+    for i = 1, numDots do
+        local angle = math.rad(i * (180 / numDots) + rotation)
+        local x = radius * math.cos(angle)
+        local y = radius * math.sin(angle)
+        
+        local dot = dots[i]
+        
+        dots[i].BackgroundColor3 = xaaakal
+        dots[i].Position = UDim2.new(0.5 + x / radius, -4, 0.5 + y / radius, -4)
+       
+    end
+   end)
+   
+   wait(math.random(5,15))
+   --loadingFrame.Visible=false
+   
+   
+
+   for i=1,numDots do
+   dots[i] .Transparency=1
+   wait(0.1)
+   end
+ wait(0.4)
+   game.TweenService:Create(message,TweenInfo.new(0.51,Enum.EasingStyle.Quint),{Position=UDim2.new(0, 0, 0.45, 0)}):Play()
+   wait(0.5)
+   message.Text=""
+   rlllllskjddj=[[Seeds Next 准备好了,正在启动]]
+for i=1,#rlllllskjddj do
+message.Text = message.Text..rlllllskjddj:sub(i,i)
+wait(0.1)
+end
+wait(0.5)
+game.TweenService:Create(frame,TweenInfo.new(1.5,Enum.EasingStyle.Quint),{Size=UDim2.new(0, 430, 0, 0)}):Play()
+wait(0.5)
+message.Visible=false
+
+print=function() end
+    NEVERLOSE = loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NEVERLOSE-UI-Nightly/main/source.lua"))()
+    Notification = NEVERLOSE:Notification()
+print=nil
+  Notification.MaxNotifications = 15
+  parryst=false
+  -- Change Theme --
+  NEVERLOSE:Theme("dark") -- [ dark , nightly , original ]
+  ------------------
+spamer=false
+  local Window = NEVERLOSE:AddWindow("Ditto","BY wevyyds16 and Qumu")
+  
+aaaah_ka=false
+  Window:AddTabLabel('Main')
+  Notification:Notify("info","It's o.o time lol","loaded successfully",4)
+  local ExampleTab = Window:AddTab('Main','locked') -- [ads , list , folder , earth , locked , home , mouse , user]
+  game.Players.LocalPlayer:SetAttribute("spamer", false)
+  lpandballdis={}
+  lpandparry={}
+  local Example = ExampleTab:AddSection('auto parry',"left")
+game.Players.LocalPlayer:GetAttributeChangedSignal("spamer"):Connect(function()
+if aaaah_ka then
+Notification:Notify("success","Auto Spam",tostring(game.Players.LocalPlayer:GetAttribute("spamer")),0.1)
+
+end
+end)
+Example:AddToggle('Auto spam',false,function(val)
+    idklolaaaaa=val
+  end)
+
+
+  Example:AddToggle('Auto parry',false,function(val)
+    parryst=val
+  end)
+  Example:AddToggle('State Information',true,function(val)
+    parrytext.Visible=val
+  end)
+  Example:AddToggle('Spamer Information',false,function(val)
+    aaaah_ka=val
+  end)
+  Example:AddToggle('parry range',true,function(val)
+    if val then
+
+
+      B.Transparency = 0
+     else
+      B.Transparency = 1
+    end
+
+  end)
+ 
+  game.Players.LocalPlayer:SetAttribute("target", "hi")
+    
+ 
+    game.Players.LocalPlayer:GetAttributeChangedSignal("target"):Connect(function()
+      if game:GetService("Workspace"):FindFirstChild("Balls"):FindFirstChildOfClass("Part") then
+       if (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - game:GetService("Workspace"):FindFirstChild("Balls"):FindFirstChildOfClass("Part").Position).Magnitude <= 35 then
+
+          lpandballdis[(#lpandballdis)+1]=tick()
+          
+
+
+
+        end
+
+
+
+      end
+
+
+
+
+    end)
+
+
+  
+  game.Players.LocalPlayer:SetAttribute("waitparry", false)
+  game.Players.LocalPlayer:GetAttributeChangedSignal("waitparry"):Connect(function()
+
+    if game.Players.LocalPlayer:GetAttribute("waitparry") then
+      lpandparry[(#lpandparry)+1]=tick()
+
+
+
+
+
+
+end
+
+
+    end)
+
+
+    
+
+    task.spawn(function()
+      while game:GetService("RunService").RenderStepped:wait() do
+        if spamer and game:GetService("Workspace"):FindFirstChild("Balls"):FindFirstChildOfClass("Part") then
+
+          parryer:FireServer(
+          0.5,
+          CFrame.new(game:GetService("Workspace").CurrentCamera.CFrame.Position, Vector3.zero),
+          {[notlp.Name] = notlp:FindFirstChild("HumanoidRootPart").Position},
+
+
+
+          {notlp:FindFirstChild("HumanoidRootPart").Position.X,
+            notlp:FindFirstChild("HumanoidRootPart").Position.Y},
+          false
+          )
+
+
+        end
+
+
+      end
+    end)
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if spamer1 and game:GetService("Workspace"):FindFirstChild("Balls"):FindFirstChildOfClass("Part") then
+
+          parryer:FireServer(
+          0.5,
+          CFrame.new(game:GetService("Workspace").CurrentCamera.CFrame.Position, Vector3.zero),
+          {[notlp.Name] = notlp:FindFirstChild("HumanoidRootPart").Position},
+
+
+
+          {notlp:FindFirstChild("HumanoidRootPart").Position.X,
+            notlp:FindFirstChild("HumanoidRootPart").Position.Y},
+          false
+          )
+
+
+        end
+end)
+    function check_lol(dtable,timelol)
+   
+    return tick()-dtable[#dtable] <=timelol and dtable[#dtable] -dtable[#dtable-1] <=timelol 
+    
+   
+    
+    
+    end
+    
+    
+    
+  
+
+    task.spawn(function()
+      while game:GetService("RunService").RenderStepped:wait() do
+        if idklolaaaaa and #lpandballdis >= 3 and #lpandparry >=3 then
+          if check_lol(lpandparry,0.5/(0.85/get_hspeed)) and check_lol(lpandballdis,0.5/(0.8/get_hspeed)) then
+game.Players.LocalPlayer:SetAttribute("spamer", true)
+            spamer=true
+            spamer1=true
+           else
+           game.Players.LocalPlayer:SetAttribute("spamer", false)
+            spamer=false
+            spamer1=false
+     
+          end
+          
+end
+        end
+      end)
+
+
+
+
+
+
+      get_hspeed=0
+      task.spawn(function()
+        while game:GetService("RunService").RenderStepped:wait() do
+          o_otick=tick()
+game:GetService("RunService").RenderStepped:wait()
+          get_hspeed=string.format("%1f",(tick()-o_otick)*25)
+
+
+
+
+        end
+
+
+      end)
+      --game.Players.LocalPlayer:GetAttributeChangedSignal("waitparry"):Connect(function()
+      --   coolaakaa=coolaakaa+1
+      --end)
+      _G.spam_start=false
+      --local Players = game:GetService("Players")
+      waitparry=false
+
+      AliveFolder = Workspace:WaitForChild("Alive")
+      function get_plrChar()
+        plrChar = game.Players.LocalPlayer.Character
+        if plrChar then
+          return plrChar
+        end
+      end
+
+      function get_plrRP()
+        plrRP = get_plrChar():FindFirstChild("HumanoidRootPart")
+
+        if plrRP then
+          return plrRP
+        end
+      end
+
+
+      aaaaaaaaa=0
+      pa = true
+      a1=1
+      b2=2
+      c3=3
+
+      B = Instance.new("Part",workspace)
+      SwitchCorner = Instance.new("UICorner")--Shit
+      B.Name = "nilBox"
+      SwitchCorner.CornerRadius = UDim.new(9, 9999)
+      B.Shape="Cylinder"
+      B.Rotation=Vector3.new(0, 0, 90)
+      SwitchCorner.Name = "SwitchCorner"--Shit
+      SwitchCorner.Parent = B--Shit
+      coolaakaa=0
+
+
+
+
+      function get_plrChar()
+        plrChar = game.Players.LocalPlayer.Character
+        if plrChar then
+          return plrChar
+        end
+      end
+
+      function get_plrRP()
+        plrRP = get_plrChar():FindFirstChild("HumanoidRootPart")
+        if plrRP then
+          return plrRP
+        end
+      end
+
+
+
+
+      plrRP = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+      function parry()
+
+
+        task.spawn(function()
+
+
+
+          parryer:FireServer(
+          0.5,
+          CFrame.new(game:GetService("Workspace").CurrentCamera.CFrame.Position, Vector3.zero),
+          {[notlp.Name] = notlp:FindFirstChild("HumanoidRootPart").Position},
+
+
+
+          {notlp:FindFirstChild("HumanoidRootPart").Position.X,
+            notlp:FindFirstChild("HumanoidRootPart").Position.Y},
+          false
+          )
+
+
+
+
+
+
+
+        end)
+
+
+      end
+
+
+
+
+
+      parrytextGui = Instance.new("ScreenGui", getParent)
+      parrytext = Instance.new("TextLabel", getParent)
+      parrytextGui.Name = "parrytextGui"
+      parrytextGui.Parent = game.CoreGui
+      parrytextGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+      parrytextGui.Enabled = true
+      parrytext.Name = "parrytext"
+      parrytext.Parent = parrytextGui
+      parrytext.BackgroundColor3 = Color3.new(1, 1, 1)
+      parrytext.BackgroundTransparency = 1
+      parrytext.BorderColor3 = Color3.new(0, 0, 0)
+      parrytext.Position = UDim2.new(0,0,00)
+      parrytext.Size = UDim2.new(0, 500, 0, 530)
+      parrytext.Font = Enum.Font.GothamSemibold
+      parrytext.Text = "Ready"
+      gradient = Instance.new("UIGradient")
+      gradient.Rotation = 45
+      gradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 0, 255)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 0)),ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 0, 0))}
+
+      gradient.Parent = parrytext
+      parrytext.TextColor3 = Color3.new(1, 1, 1)
+      parrytext.TextScaled = true
+      parrytext.TextSize = 15
+      parrytext.TextWrapped = true
+      parrytext.Visible = true
+
+
+      task.spawn(function()
+        while game:GetService("RunService").RenderStepped:wait() do
+          -- camera = workspace.CurrentCamera
+
+          local workspace = game:GetService("Workspace")
+          local player = game.Players.LocalPlayer
+          local playerName = player.Name
+
+          local aliveObjects = workspace:FindFirstChild("Alive")
+
+
+          task.spawn(function()
+
+            for _, object in ipairs(aliveObjects:GetChildren()) do
+
+              if object.Name ~= playerName then
+
+                notlp = object
+                break
+              end
+            end
+          end)
+
+        end
+      end)
+      task.spawn(function()
+        for _, hwkdhhdsjsjwkwkajjssjjs in pairs({
+            game:GetService('AdService'),
+            game:GetService('SocialService')
+          }) do
+
+          if hwkdhhdsjsjwkwkajjssjjs:FindFirstChildOfClass('RemoteEvent')then
+            if hwkdhhdsjsjwkwkajjssjjs:FindFirstChildOfClass('RemoteEvent').Name:find('\n') then
+              parryer=hwkdhhdsjsjwkwkajjssjjs:FindFirstChildOfClass('RemoteEvent')
+              break
+            end
+          end
+        end
+
+
+      end)
+      coolaakaa=0
+      print("The script was created by Qumu")
+      cool=true
+      eeee=true
+      parrydis=1
+      BallSpeed = 1
+      task.spawn(function()
+        while game:GetService("RunService").RenderStepped:wait() do
+
+
+          Balls = workspace:WaitForChild("Balls",20)
+
+          Ball = Balls:FindFirstChildOfClass("Part")
+          plrRP = get_plrRP()
+
+
+          if not Ball then
+            coolaakaa=0
+lpandballdis={}
+  lpandparry={}
+            spamer=false
+            spamer1=false
+            game.Players.LocalPlayer:SetAttribute("spamer", false)
+            _G.spam_start=false
+            game.Players.LocalPlayer:SetAttribute("waitparry", false)
+            Pay="money"--快点给我打钱
+
+
+           else
+
+          end
+
+
+
+
+          TargetPlayer = ""
+
+
+
+
+
+
+          Ball = Balls:FindFirstChildOfClass("Part")
+          if Ball then
+            Tager = Ball:GetAttribute("target")
+game.Players.LocalPlayer:SetAttribute("target", Ball:GetAttribute("target"))
+
+
+
+
+            --Distance between character and ball (not good)
+
+
+
+            BallSpeed = Ball.Velocity.Magnitude--Ball speed
+               parrytext.Text =BallSpeed.."\n".."By wevyyds16 and Qumu."
+
+          end
+
+
+
+
+
+
+
+          if BallSpeed <=50 then--Judge speed adjustment range
+            parrydis=35
+
+           elseif BallSpeed >= 200 and BallSpeed <= 400 then
+
+            parrydis=30+BallSpeed/(1.7/get_hspeed)
+           elseif BallSpeed >= 400 then--Good for a curve ball:)
+            parrydis=30+BallSpeed/(2.4/get_hspeed)
+
+
+           else
+
+            parrydis=30+BallSpeed/(3/get_hspeed)--Ordinary speed
+          end
+
+
+
+
+
+
+          task.spawn(function()
+
+
+
+            Ball = Balls:FindFirstChildOfClass("Part")
+            Blls = workspace:WaitForChild("Map",20)--Shit
+            if Blls and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and Ball then
+
+              Bll = Blls:FindFirstChildOfClass("Model")--Shit
+              floor = Bll:FindFirstChildOfClass("MeshPart")--Shit
+              pr = get_plrRP()--Get characters
+              B.Position = plrRP.Position - Vector3.new(0, 3.177, 0)--A good position:)
+              B.Rotation=Vector3.new(0, 0, 90)--Force it (not good)
+
+              B.CanCollide= false--If it's true, then you'll fly to heaven to meet your mother
+
+              B.Color = Color3.fromRGB(a1, b2, c3)--Shit Random Color
+
+
+              B.Size=Vector3.new(1, parrydis/2, parrydis/2)--Range display(idklol)
+              gradient.Rotation = a1
+
+
+              a1 = a1 + 3
+              b2 = b2 + 5
+              c3 = c3 + 8
+
+            end
+
+          end)
+
+
+
+        end
+      end)
+      game:GetService("RunService").RenderStepped:Connect(function()
+
+
+        task.spawn(function()
+
+
+          if Ball and parryst then--Judge the ball
+            if Tager == game.Players.LocalPlayer.Name then--A necessary procedure (think with your head)
+              if (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - Ball.Position).Magnitude <= parrydis and not game.Players.LocalPlayer:GetAttribute("waitparry") then
+                game.Players.LocalPlayer:SetAttribute("waitparry", true)
+                --Prevent your hand from twitching: |
+
+
+                parry()--Control your hand waving
+
+
+
+
+
+
+              end
+             else
+              game.Players.LocalPlayer:SetAttribute("waitparry", false)
+            end
+          end
+        end)
+      end)
+
+
+    
+
+   
+   else
+   message.Text=""
+rlllllskjddj=[[Seeds Next
+wevyyds16 /// qumu
+你的卡密不正确:( 
+]]
+for i=1,#rlllllskjddj do
+message.Text = message.Text..rlllllskjddj:sub(i,i)
+wait(0.01)
+end
+   wait(1)
+   message.Text=""
+rlllllskjddj=[[Seeds Next
+wevyyds16 /// qumu
+]]
+for i=1,#rlllllskjddj do
+message.Text = message.Text..rlllllskjddj:sub(i,i)
+wait(0.01)
+end
+checking=false
+end
+
+end
+end)            
